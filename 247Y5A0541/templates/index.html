@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Face Recognition Attendance</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.container{
+background:white;
+padding:30px;
+margin:50px auto;
+width:500px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+button{
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+input{
+margin-top:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Face Recognition Attendance System</h1>
+
+<button onclick="startCamera()">Start Webcam</button>
+
+<br><br>
+
+<input type="file">
+
+</div>
+
+<script>
+function startCamera(){
+navigator.mediaDevices.getUserMedia({video:true})
+.then(function(stream){
+let video=document.createElement("video");
+video.srcObject=stream;
+video.autoplay=true;
+document.body.appendChild(video);
+});
+}
+</script>
+
+<script>
+function startCamera(){
+alert("Webcam feature will start here.");
+}
+</script>
+
+</body>
+</html>

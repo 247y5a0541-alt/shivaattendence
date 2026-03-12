@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Dashboard</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.container{
+background:white;
+padding:40px;
+margin:50px auto;
+width:500px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+select{
+padding:10px;
+margin:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Faculty Dashboard</h2>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+<h3>Select Period</h3>
+
+<select name="period">
+<option value="P1">P1</option>
+<option value="P2">P2</option>
+<option value="P3">P3</option>
+<option value="P4">P4</option>
+</select>
+
+<br>
+
+<button type="button" onclick="startWebcam()">Start Webcam</button>
+
+<br><br>
+
+<input type="file" name="image" required>
+
+<br><br>
+
+<button type="submit">Upload Class Image</button>
+
+</form>
+
+</div>
+
+<script>
+function startWebcam(){
+alert("Webcam attendance will start here.");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Face Recognition Attendance</title>
+</head>
+
+<body>
+
+<h1>Face Recognition Attendance System</h1>
+
+<button onclick="startCamera()">Start Webcam</button>
+
+<br><br>
+
+<!-- PASTE THE FORM HERE -->
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image">
+
+<button type="submit">Upload Class Image</button>
+
+</form>
+
+<script>
+function startCamera(){
+navigator.mediaDevices.getUserMedia({video:true})
+.then(function(stream){
+let video=document.createElement("video");
+video.srcObject=stream;
+video.autoplay=true;
+document.body.appendChild(video);
+});
+}
+</script>
+
+</body>
+</html>

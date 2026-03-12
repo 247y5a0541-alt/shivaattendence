@@ -1,0 +1,23 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+button{
+padding:10px;
+background:#007bff;
+color:white;
+border:none;
+margin:10px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+td,th{
+border:1px solid black;
+padding:10px;
+}
